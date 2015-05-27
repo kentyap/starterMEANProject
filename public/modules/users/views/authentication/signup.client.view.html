@@ -19,27 +19,36 @@
 	</div>-->
 
 	<div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4 login-form-bg">
-		<h3 class="col-md-12 text-center">Sign Up</h3>
+		<h3 class="text-center">Sign Up</h3>
 		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
 			<fieldset>
 				<div class="form-group">
 					<div data-ng-show="error" class="text-center text-danger">
-						<div class ="alert alert-danger" role="alert">
-						<strong data-ng-bind="error"></strong>
+						<div class="alert alert-danger" role="alert">
+							<strong data-ng-bind="error"></strong>
 						</div>
 					</div>
-				</div>
 
-				<div class="form-group">
-					<div  class="input-group input-group-lg">
+					<div class="input-group input-group-lg">
 						<!--<label for="username">Username</label>-->
-							<span class="input-group-addon" >
+							<span class="input-group-addon">
 								<i class="text-muted glyphicon glyphicon-star"></i>
 							</span>
-							<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
+						<input type="text"  id="firstName" name="firstName" class="form-control"
+							   data-ng-model="credentials.firstName" placeholder="First Name" required>
 
 					</div>
+
+				<!--	<div  ng-show="userForm.firstName.$error.required && userform.$dirty" >
+						<p><i class="icon icon-warning-sign"></i>Please enter at least 8 characters</p>
+					</div>
+					<div  ng-show="userForm.firstName.$error.min && userform.$dirty" >
+						<p><i class="icon icon-warning-sign"></i>Please enter at least 8 characters</p>
+					</div>-->
+
+
 				</div>
+
 				<div class="form-group">
 					<div  class="input-group input-group-lg">
 						<!--<label for="username">Username</label>-->
